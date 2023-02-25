@@ -9,6 +9,13 @@ import Typography from "@mui/material/Typography";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const greet = () => {
+    console.log("Hello !");
+  };
+  const greet2 = (name) => {
+    console.log("Hello " + name + " !");
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -26,13 +33,22 @@ const Navbar = () => {
               </section>
               <ul className={styles.navbarOptions}>
                 <li>
-                  <Button className={styles.button}>Lo más vendido</Button>
+                  <Button className={styles.button} onClick={greet}>
+                    Lo más vendido
+                  </Button>
                 </li>
                 <li>
-                  <Button className={styles.button}>Ofertas</Button>
+                  <Button
+                    className={styles.button}
+                    onClick={() => {
+                      greet2("Agus");
+                    }}
+                  >
+                    Ofertas
+                  </Button>
                 </li>
                 <li>
-                  <Button>Sin costo de envío</Button>
+                  <Button className={styles.button}>Sin costo de envío</Button>
                 </li>
               </ul>
             </section>

@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "title": "Nike 360",
+    "price": 15000,
+    "description": "Estas son las mejores zapatillas",
+    "category": "Deportivas",
+    "img": "https://static.nike.com/a/images/t_default/ab31b9b3-ff4f-47e5-ba40-4ad67d09e4d4/venture-runner-zapatillas-NTdKPW.png"
+  }
+]
