@@ -1,0 +1,17 @@
+.navbarOptions {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.logo {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  color: whitesmoke;
+}

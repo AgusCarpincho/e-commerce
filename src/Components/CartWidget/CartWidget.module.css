@@ -1,0 +1,10 @@
+.cartWidget {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  float: right;
+}
+
+.button {
+  color: whitesmoke;
+}
