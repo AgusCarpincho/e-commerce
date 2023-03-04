@@ -5,8 +5,10 @@ import styles from "./CartWidget.module.css";
 const CartWidget = () => {
   return (
     <section className={styles.cartWidget}>
-      <ShoppingCartIcon></ShoppingCartIcon>
-      <Button className={styles.button}>Ver carrito</Button>
+      <Button className={styles.button}>
+        <ShoppingCartIcon />
+        Ver carrito
+      </Button>
     </section>
   );
 };

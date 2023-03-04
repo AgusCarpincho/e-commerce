@@ -7,7 +7,7 @@ const ItemList = ({ items }) => {
       <h1>Este es el presentacional</h1>
       <ul className={styles.ul}>
         {items.map((item) => {
-          return <Item item={item} />;
+          return <Item key={item.id} item={item} />;
         })}
       </ul>
     </div>

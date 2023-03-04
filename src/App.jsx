@@ -3,14 +3,17 @@ import Navbar from "./Components/Navbar/Navbar";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ItemCount from "./Components/ItemCount/ItemCount";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import ConsumingAPIs from "./Components/ConsumingAPIs/ConsumingAPIs";
+
+// Con estos componentes podemos simular la navegacion entre diferentes paginas de nuestra SPA
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ItemDetailsContainer from "./Components/ItemDetailsContainer/ItemDetailsContainer";
 
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
   },
 });
-
-//<ItemListContainer />
 
 function App() {
   const onAdd = (aQuantity) => {
@@ -20,12 +23,27 @@ function App() {
   return (
     <>
       <ThemeProvider theme={darkTheme}>
-        <Navbar />
-        <ItemCount stock={5} initial={1} onAdd={onAdd} />
-        <ItemListContainer />
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/category/:category" element={<ItemListContainer />} />
+            <Route path="/cart" element={<h1>Estoy en el carrito</h1>} />
+            <Route path="/itemDetails/:id" element={<ItemDetailsContainer />} />
+            <Route path="*" element={<h1>Error 404 Not Found</h1>} />
+          </Routes>
+        </BrowserRouter>
       </ThemeProvider>
     </>
   );
 }
+// Lo que esta fuera del componente Routes , por ejemplo Navbar lo que sucedera es que estara el Navbar disponible para todas las rutas
+// mientras que solo cambiaria el contenido definido en cada Route
 
+/* <ThemeProvider theme={darkTheme}>
+            <Navbar />
+            <ItemCount stock={5} initial={1} onAdd={onAdd} />
+            <ItemListContainer />
+            <ConsumingAPIs />
+          </ThemeProvider>*/
 export default App;

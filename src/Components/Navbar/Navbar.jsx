@@ -5,6 +5,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 import styles from "./Navbar.module.css";
 
@@ -23,13 +24,13 @@ const Navbar = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <section className={styles.navbarOptions}>
               <section className={styles.logo}>
-                <a href="/">
+                <Link to="/">
                   <img
                     className={styles.logo}
                     src={logo}
                     alt="Logo del e-commerce"
                   />
-                </a>
+                </Link>
               </section>
               <ul className={styles.navbarOptions}>
                 <li>
@@ -54,7 +55,9 @@ const Navbar = () => {
             </section>
           </Typography>
           <section>
-            <CartWidget></CartWidget>
+            <Link to="/cart">
+              <CartWidget />
+            </Link>
           </section>
         </Toolbar>
       </AppBar>
