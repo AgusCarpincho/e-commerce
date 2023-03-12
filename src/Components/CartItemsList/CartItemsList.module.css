@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
+  padding: 2rem;
+  background-color: rgb(36, 36, 36);
+  color: white;
+}
+
+.title {
+  margin: 4rem;
+  padding: 2rem;
+  background-color: rgb(36, 36, 36);
+  color: white;
+}
