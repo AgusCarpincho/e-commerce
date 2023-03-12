@@ -22,8 +22,8 @@ const ItemDetailsContainer = () => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image=""
+          height="400"
+          image={item.img}
           alt={item.description}
         />
         <CardContent>

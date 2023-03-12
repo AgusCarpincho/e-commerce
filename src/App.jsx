@@ -6,6 +6,7 @@ import CartContextProvider from "./context/CartContext";
 // Con estos componentes podemos simular la navegacion entre diferentes paginas de nuestra SPA
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailsContainer from "./Components/ItemDetailsContainer/ItemDetailsContainer";
+import CartItemListContainer from "./Components/CartItemListContainer/CartItemListContainer";
 
 const darkTheme = createTheme({
   palette: {
@@ -32,7 +33,7 @@ function App() {
                 path="/category/:category"
                 element={<ItemListContainer />}
               />
-              <Route path="/cart" element={<h1>Estoy en el carrito</h1>} />
+              <Route path="/cart" element={<CartItemListContainer />} />
               <Route
                 path="/itemDetails/:id"
                 element={<ItemDetailsContainer />}
