@@ -10,13 +10,6 @@ import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
-  const greet = () => {
-    console.log("Hello !");
-  };
-  const greet2 = (name) => {
-    console.log("Hello " + name + " !");
-  };
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -31,25 +24,24 @@ const Navbar = () => {
                     alt="Logo del e-commerce"
                   />
                 </Link>
+                <Link className={styles.link} to="/">
+                  Capyshop
+                </Link>
               </section>
               <ul className={styles.navbarOptions}>
                 <li>
-                  <Button className={styles.button} onClick={greet}>
-                    Lo más vendido
+                  <Button onClick={() => {}}>
+                    <Link className={styles.link} to={`/category/${"mates"}`}>
+                      Mates
+                    </Link>
                   </Button>
                 </li>
                 <li>
-                  <Button
-                    className={styles.button}
-                    onClick={() => {
-                      greet2("Agus");
-                    }}
-                  >
-                    Ofertas
+                  <Button onClick={() => {}}>
+                    <Link className={styles.link} to={`/category/${"figuras"}`}>
+                      Figuras
+                    </Link>
                   </Button>
-                </li>
-                <li>
-                  <Button className={styles.button}>Sin costo de envío</Button>
                 </li>
               </ul>
             </section>

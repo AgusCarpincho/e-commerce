@@ -12,6 +12,8 @@
   align-items: center;
 }
 
-.button {
+.link {
+  font-size: 2rem;
   color: whitesmoke;
+  text-decoration: none;
 }

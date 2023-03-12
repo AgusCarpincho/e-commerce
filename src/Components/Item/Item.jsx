@@ -1,38 +1,14 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import React from "react";
 import styles from "./Item.module.css";
-import { Link } from "react-router-dom";
-
-const Item = ({ item }) => {
+import Button from "@mui/material/Button";
+const Item = ({ item, addToCart }) => {
   return (
-    <>
-      <li className={styles.li} key={item.id}>
-        <Card sx={{ minWidth: 275 }}>
-          <CardContent>
-            <Typography
-              sx={{ fontSize: 20 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              {item.title}
-            </Typography>
-            <img
-              className={styles.img}
-              src={item.img}
-              alt="Imagen de zapatillas"
-            />
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              {item.description}
-            </Typography>
-            <Link to={`/itemDetails/${item.id}`}>
-              <Button style={{ color: "white" }}>Ver detalles</Button>
-            </Link>
-          </CardContent>
-        </Card>
-      </li>
-    </>
+    <div className={styles.div}>
+      <h1>{item.title}</h1>
+      <img src={item.img} alt={item.description} />
+      <h1>Precio: ${item.price}</h1>
+      <Button onClick={addToCart}>Agregar</Button>
+    </div>
   );
 };
 
